@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invitación Bakary & Yousra</title>
+  <meta name="description" content="Invitación de boda de Bakary & Yousra" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#13355a;
+      --blue:#8fa8b7;
+      --soft-blue:#dbe6eb;
+      --gold:#cda85f;
+      --cream:#fffdf8;
+      --paper:#fbf8ef;
+      --ink:#32404a;
+      --muted:#6c7880;
+      --shadow:0 22px 70px rgba(19,53,90,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(205,168,95,.16), transparent 28rem),
+        radial-gradient(circle at bottom right, rgba(143,168,183,.25), transparent 30rem),
+        linear-gradient(180deg, #fffdf8 0%, #f5f7f5 100%);
+      font-family:'Montserrat', system-ui, -apple-system, Segoe UI, sans-serif;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+    body:before, body:after{
+      content:"";
+      position:fixed;
+      top:0; bottom:0;
+      width:min(18vw,170px);
+      pointer-events:none;
+      opacity:.36;
+      z-index:0;
+      background-repeat:no-repeat;
+      background-size:contain;
+    }
+    body:before{
+      left:0;
+      background-image:
+        radial-gradient(ellipse at 15% 20%, rgba(205,168,95,.22) 0 18%, transparent 19%),
+        radial-gradient(ellipse at 35% 55%, rgba(143,168,183,.22) 0 20%, transparent 21%);
+    }
+    body:after{
+      right:0;
+      background-image:
+        radial-gradient(ellipse at 70% 18%, rgba(143,168,183,.22) 0 18%, transparent 19%),
+        radial-gradient(ellipse at 55% 70%, rgba(205,168,95,.18) 0 22%, transparent 23%);
+    }
+    .page{position:relative; z-index:1; width:min(1120px,92vw); margin:0 auto; padding:34px 0 52px}
+    .nav{
+      display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin:10px auto 26px;
+      font-size:.76rem; letter-spacing:.18em; text-transform:uppercase;
+    }
+    .nav a{color:var(--navy); text-decoration:none; border-bottom:1px solid rgba(205,168,95,.55); padding:6px 2px}
+    .card{
+      background:rgba(255,253,248,.88);
+      border:1px solid rgba(205,168,95,.30);
+      box-shadow:var(--shadow);
+      border-radius:28px;
+      backdrop-filter: blur(10px);
+    }
+    .hero{padding:32px 28px 30px; text-align:center; position:relative; overflow:hidden}
+    .hero:before,.hero:after{
+      content:"✦"; position:absolute; color:rgba(205,168,95,.5); font-size:1.2rem;
+    }
+    .hero:before{top:22px; left:28px}.hero:after{bottom:22px; right:28px}
+    .logo{
+      width:86px; height:86px; border:1.5px solid var(--navy); color:var(--navy); border-radius:50%;
+      display:grid; place-items:center; margin:0 auto 18px; position:relative; font-family:'Cormorant Garamond',serif;
+      font-size:2rem; font-weight:700;
+    }
+    .logo span{color:var(--gold); font-size:1.6rem; padding:0 2px}
+    .logo:before{content:"⚓"; position:absolute; top:-19px; font-size:1.1rem; color:var(--navy); background:var(--cream); padding:0 4px}
+    .names{font-family:'Cormorant Garamond',serif; font-size:clamp(3.1rem, 9vw, 6.8rem); line-height:.9; letter-spacing:.09em; text-transform:uppercase; color:var(--navy); margin:8px 0 10px}
+    .amp{display:inline-block; color:var(--gold); font-style:italic; transform:translateY(-.04em); letter-spacing:0}
+    .subtitle{letter-spacing:.14em; text-transform:uppercase; font-size:.86rem; color:var(--muted); margin:0 auto 20px}
+    .intro{font-family:'Cormorant Garamond',serif; font-size:clamp(1.25rem,2.6vw,1.8rem); color:#526168; max-width:760px; margin:0 auto 22px}
+    .photo-frame{
+      min-height:330px; border-radius:28px; margin:26px auto; overflow:hidden; border:1px solid rgba(205,168,95,.22);
+      background:
+        linear-gradient(rgba(19,53,90,.18),rgba(19,53,90,.08)),
+        url('assets/masia.jpg') center/cover;
+      display:grid; place-items:center; color:white; text-shadow:0 2px 15px rgba(0,0,0,.35);
+    }
+    .photo-frame strong{font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3.8rem); font-weight:500}
+    .quote{max-width:760px; margin:0 auto; color:#5d6870; font-size:.98rem}
+    .section{margin:24px 0; padding:30px}
+    .section-title{font-family:'Cormorant Garamond',serif; letter-spacing:.19em; text-transform:uppercase; text-align:center; color:var(--navy); font-size:clamp(1.55rem,4vw,2.2rem); margin:0 0 20px}
+    .section-title:after{content:""; display:block; width:92px; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); margin:14px auto 0}
+    .date-big{display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; margin-top:10px}
+    .date-big .day{font-family:'Cormorant Garamond',serif; color:var(--gold); font-size:clamp(5.5rem,16vw,9rem); line-height:.75}
+    .date-big .words{font-family:'Cormorant Garamond',serif; color:var(--navy); font-size:clamp(1.6rem,4vw,2.8rem); text-transform:uppercase; letter-spacing:.17em}
+    .timeline{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; max-width:690px; margin:22px auto 0}
+    .time-box{padding:22px; border-radius:22px; background:rgba(219,230,235,.36); border:1px solid rgba(143,168,183,.35); text-align:center}
+    .time-box small{display:block; text-transform:uppercase; letter-spacing:.16em; color:var(--muted); margin-bottom:6px}
+    .time-box strong{font-size:2rem; color:var(--navy)}
+    .place{display:grid; grid-template-columns:1.1fr .9fr; gap:22px; align-items:center}
+    .map-card{border-radius:24px; min-height:250px; background:
+      linear-gradient(rgba(255,253,248,.22), rgba(255,253,248,.22)),
+      url('assets/ubicacion.jpg') center/cover; border:1px solid rgba(205,168,95,.24)}
+    .btn-row{display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:22px}
+    .btn{display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:12px 22px; border-radius:999px; text-decoration:none; font-weight:600; letter-spacing:.04em; transition:.2s ease; border:1px solid transparent}
+    .btn.primary{background:var(--navy); color:white}.btn.secondary{background:transparent; color:var(--navy); border-color:rgba(19,53,90,.28)}
+    .btn:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(19,53,90,.12)}
+    .confirm{text-align:center}
+    .confirm p{max-width:660px; margin:0 auto 10px; color:#5d6870}
+    .qr-box{
+      width:min(250px,72vw);
+      margin:24px auto 8px;
+      border:1px solid rgba(205,168,95,.45);
+      border-radius:18px;
+      background:white;
+      padding:16px;
+      box-shadow:0 12px 30px rgba(19,53,90,.08);
+    }
+    .qr-box img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:8px;
+    }
+    .qr-caption{
+      margin-top:10px;
+      font-size:.82rem;
+      color:var(--muted);
+      letter-spacing:.04em;
+    }
+    footer{text-align:center; padding:20px 0 6px; color:var(--muted); font-family:'Cormorant Garamond',serif; font-size:1.35rem}
+    .ornament{color:var(--gold); text-align:center; margin:6px 0 0; letter-spacing:.7em}
+    @media(max-width:760px){
+      .page{width:94vw; padding-top:18px}.hero,.section{padding:24px 18px;border-radius:22px}.nav{font-size:.68rem; gap:10px}
+      .photo-frame{min-height:245px}.timeline,.place{grid-template-columns:1fr}.map-card{min-height:210px}.date-big{gap:8px}.date-big .words{text-align:center}
+      body:before,body:after{display:none}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="nav" aria-label="Orden de la invitación">
+      <a href="#presentacion">Presentación</a>
+      <a href="#fecha">Fecha</a>
+      <a href="#lugar">Lugar</a>
+      <a href="#confirmacion">Confirmación</a>
+    </nav>
+
+    <section id="presentacion" class="hero card">
+      <div class="logo">Y<span>B</span></div>
+      <p class="subtitle">Nos complace hacerte llegar la invitación a nuestra boda</p>
+      <h1 class="names">Bakary <span class="amp">&</span> Yousra</h1>
+      <p class="intro">La vida es mil veces mejor cuando se comparte con las personas que amamos.</p>
+      <div class="photo-frame" role="img" aria-label="Fotografía de la Casa Masía del Mar junto al mar"></div>
+      <p class="quote">Por eso nos hará mucha ilusión contar contigo en uno de los días más importantes de nuestras vidas.</p>
+      <div class="ornament">✦ ❦ ✦</div>
+    </section>
+
+    <section id="fecha" class="section card">
+      <h2 class="section-title">Fecha</h2>
+      <div class="date-big" aria-label="15 de noviembre de 2025">
+        <div class="words">Domingo</div>
+        <div class="day">15</div>
+        <div class="words">Noviembre 2025</div>
+      </div>
+      <div class="timeline">
+        <div class="time-box"><small>Inicio celebración</small><strong>14:00h</strong></div>
+        <div class="time-box"><small>Fin</small><strong>22:00h</strong></div>
+      </div>
+    </section>
+
+    <section id="lugar" class="section card">
+      <h2 class="section-title">Lugar</h2>
+      <div class="place">
+        <div>
+          <p><strong>Casa Masía del Mar</strong></p>
+          <p>Sant Pere de Ribes</p>
+          <p>Querido/a invitado/a, para que todo transcurra de la mejor manera posible, te pedimos ser puntual para poder asistir a todos los momentos de la boda.</p>
+          <div class="btn-row">
+            <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&query=Casa%20Mas%C3%ADa%20del%20Mar%20Sant%20Pere%20de%20Ribes" target="_blank" rel="noopener">Ver ubicación</a>
+          </div>
+        </div>
+        <div class="map-card" aria-label="Imagen decorativa de mapa y costa"></div>
+      </div>
+    </section>
+
+    <section id="confirmacion" class="section card confirm">
+      <h2 class="section-title">Confirmación de asistencia</h2>
+      <p>Accede al siguiente enlace para confirmar tu asistencia y ayudarnos a organizar todos los detalles.</p>
+      <div class="qr-box" aria-label="Código QR para confirmar asistencia">
+        <img src="assets/qr-confirmacion.png" alt="QR para confirmar asistencia">
+      </div>
+      <p class="qr-caption">Escanea este QR para confirmar tu asistencia</p>
+      <div class="btn-row">
+        <a class="btn primary" href="https://forms.gle/CR9DZmrmDjwdThVT7" target="_blank" rel="noopener">Confirmar asistencia</a>
+        <a class="btn secondary" href="#presentacion">Volver al inicio</a>
+      </div>
+    </section>
+
+    <footer>
+      Atentamente,<br><strong>Bakary & Yousra</strong>
+    </footer>
+  </main>
+</body>
+</html>
